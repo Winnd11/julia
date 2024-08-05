@@ -9,6 +9,15 @@
 
 # M = 1.340,10
 
+println("Choice your investment")
+c = parse(Int16, readline())
+
+println("Interest rate")
+i = parse(Float16, readline())
+
+println("Time in months")
+t = parse(Int16, readline())
+
 function f(c, i, t)
     i = i + 1
     i = i ^ t
@@ -16,4 +25,4 @@ function f(c, i, t)
     println(round(result))
 end
 
-f(1000, 0.05, 3)
+f(c, i, t)
