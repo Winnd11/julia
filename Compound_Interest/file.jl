@@ -15,7 +15,7 @@ c = parse(Int16, readline())
 println("Interest rate")
 i = parse(Float16, readline())
 
-println("Time in months")
+println("Time in years")
 t = parse(Int16, readline())
 
 function f(c, i, t)
