@@ -128,3 +128,20 @@ seconds = remainingMinutes % 60
 
 print(round(hours), " ", round(minutes), " ", round(seconds))
 
+word = "level"
+prefx = "ad"
+
+function palid(word)
+    reverseW = ""
+    n = length(word)
+
+    for i in n:-1:1
+        reverseW = reverseW * word[i]
+    end
+
+    return reverseW == word
+end
+
+for letter in word
+    println(letter * prefx)
+end
