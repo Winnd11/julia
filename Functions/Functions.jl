@@ -96,4 +96,35 @@ function facto(x)
     end
 end
 
-facto(21)
+function countdown(n)
+    if n ≤ 0
+        println("Blastoff!")
+    else
+        print(n, " ")
+        countdown(n-1)
+    end
+end
+
+function countdownLoop(n)
+    for i in 1:n
+        print(n, " ")
+        n = n -1
+        if n <= 0
+            println("Blastoff!")
+        end
+    end
+end
+
+function recurse()
+    recurse()
+end
+
+#recurse()
+totalTime = time()
+hours = floor(totalTime / 3600)
+remainingMinutes = totalTime % 3600
+minutes = floor(remainingMinutes / 60)
+seconds = remainingMinutes % 60
+
+print(round(hours), " ", round(minutes), " ", round(seconds))
+
