@@ -19,10 +19,81 @@ function concatWords(a, b)
     println(concat)
 end
 
-parseNumber("3")
-truncNumber(4.12)
-floatNumber(9)
-toString(1)
-concatWords("Oi", "oi")
 
-println(log10(10000))
+function area(raio)
+    a = π * raio^2
+    return a
+end
+
+function absvalue(x)
+    if x < 0
+        return -x
+    else
+        return x
+    end
+end
+
+function compare(x, y)
+    if x > y
+        return 1
+    elseif isequal(x, y)
+        return 0
+    else
+        return -1
+    end
+end
+
+function distance(x₁, y₁, x₂, y₂)
+    dx = x₂ - x₁
+    dy = y₂ - y₁
+    d² = dx^2 + dy^2
+    sqrt(d²)
+    
+end
+
+function circlearea(xc, yc, xp, yp)
+    area(distance(xc, yc, xp, yp))
+end
+
+function isdivisible(x, y)
+    x % y == 0
+end
+
+function fib(n)
+    if n == 0
+        return 0
+    elseif n == 1
+        return 1
+    else
+        return fib(n-1) + fib(n-2)
+    end
+end
+
+function facto(x)
+    msgErrorExceptionStringValue = "Factorial is only defined for integers."
+    msgErrorExceptionNegativeValue = "Factorial is not defined by negative integers."
+    msgErrorExceptionOverflow = ".."
+
+    if !(isa(x, Int64))
+        return error(msgErrorExceptionStringValue)
+    elseif x < 0
+        return error(msgErrorExceptionNegativeValue)
+    elseif x >= 21
+        return error(msgErrorExceptionOverflow)
+    else
+        r = x
+
+        for i in 1:x
+            x = x - 1
+            r = r * x
+            if isequal(x, 1)
+                break
+            end
+        end
+        
+        return r
+
+    end
+end
+
+facto(21)
