@@ -145,3 +145,18 @@ end
 for letter in word
     println(letter * prefx)
 end
+
+l = 49
+x = 7
+r = (x + l/x) / 2
+
+function mysqrt(x, y)
+    r = (y + x/y) / 2
+    return r
+end
+
+exp = Meta.parse("3+1")
+#eval(exp)
+
+exp2 = Meta.parse("π")
+#eval(exp2)
